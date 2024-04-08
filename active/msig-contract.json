@@ -1,0 +1,45 @@
+{
+    "application_number": 2,
+    "address": "t410fr2etl2r53ubf6txlkhwqsv2takfqgwcohn77hhi",
+    "name": "Msig Contract",
+    "organization": "Neti",
+    "location": "Europe",
+    "status": "Active",
+    "metapathway_type": "Manual",
+    "associated_org_addresses": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
+    "application": {
+        "allocations": {
+            "standardized": "Yes; standardized"
+        },
+        "target_clients": [
+            "Test"
+        ],
+        "required_sps": "4+",
+        "required_replicas": "4+",
+        "tooling": [
+            "common_ui"
+        ],
+        "data_types": [
+            "Public Open Dataset (Research/Non-Profit)",
+            "Public Open Commercial/Enterprise"
+        ],
+        "12m_requested": 200,
+        "github_handles": [
+            "kacperzuk-neti",
+            "tplocic20",
+            "Filip-L",
+            "SzymonZiebaNeti"
+        ],
+        "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-contract"
+    },
+    "poc": {
+        "github_user": "kacperzuk-neti"
+    },
+    "pathway_addresses": {
+        "msig": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
+        "signer": [
+            "t17dx5t567wz5ues2cjkh5mor36nwxysnd5dugpey",
+            "t1roygqfjkssnfhz3xtfglikg4olckyjrl5ftlqmi"
+        ]
+    }
+}
