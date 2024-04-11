@@ -1,7 +1,7 @@
 {
-    "application_number": 1,
-    "address": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
-    "name": "Msig Classic",
+    "application_number": 2,
+    "address": "t410fr2etl2r53ubf6txlkhwqsv2takfqgwcohn77hhi",
+    "name": "Direct Contract",
     "organization": "Neti",
     "location": "Europe",
     "status": "Active",
@@ -17,7 +17,8 @@
         "required_sps": "4+",
         "required_replicas": "4+",
         "tooling": [
-            "common_ui"
+            "common_ui",
+            "smart_contract_allocator"
         ],
         "data_types": [
             "Public Open Dataset (Research/Non-Profit)",
@@ -30,18 +31,15 @@
             "Filip-L",
             "SzymonZiebaNeti"
         ],
-        "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic"
+        "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-contract"
     },
     "poc": {
         "github_user": "kacperzuk-neti"
     },
     "pathway_addresses": {
-        "msig": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
+        "msig": null,
         "signer": [
-            "t17dx5t567wz5ues2cjkh5mor36nwxysnd5dugpey",
-            "t1roygqfjkssnfhz3xtfglikg4olckyjrl5ftlqmi",
-            "t1kondrvyrnyypismf573otgrnl65n7fizbwvqeui",
-            "t12bmwnuroxvi4zk56zv2q3quuzfehiyoojmb43ta"
+            "t163aphvebakvkce22mkfj4ubrt2qxtcbpuoacaey"
         ]
     }
 }
