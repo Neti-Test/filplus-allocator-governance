@@ -1,6 +1,6 @@
 {
     "application_number": 2,
-    "address": "t410fr2etl2r53ubf6txlkhwqsv2takfqgwcohn77hhi",
+    "address": "t410fmqf5jpqut5ahctmvvpgucqzyxr6p6ond6pqephq",
     "name": "Msig Contract",
     "organization": "Neti",
     "location": "Europe",
@@ -37,7 +37,7 @@
         "github_user": "kacperzuk-neti"
     },
     "pathway_addresses": {
-        "msig": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
+        "msig": "t2n66oxju5uhgn26kb5ujsbg2q3vmzmkxrwbeqfcy",
         "signer": [
             "t17dx5t567wz5ues2cjkh5mor36nwxysnd5dugpey",
             "t1roygqfjkssnfhz3xtfglikg4olckyjrl5ftlqmi",
