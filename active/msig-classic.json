@@ -1,12 +1,12 @@
 {
     "application_number": 1,
-    "address": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
+    "address": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
     "name": "Msig Classic",
     "organization": "Neti",
     "location": "Europe",
     "status": "Active",
     "metapathway_type": "Manual",
-    "associated_org_addresses": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
+    "associated_org_addresses": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
     "application": {
         "allocations": {
             "standardized": "Yes; standardized"
@@ -37,7 +37,7 @@
         "github_user": "kacperzuk-neti"
     },
     "pathway_addresses": {
-        "msig": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
+        "msig": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
         "signer": [
             "t17dx5t567wz5ues2cjkh5mor36nwxysnd5dugpey",
             "t1roygqfjkssnfhz3xtfglikg4olckyjrl5ftlqmi",
