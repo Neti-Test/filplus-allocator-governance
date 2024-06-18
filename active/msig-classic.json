@@ -32,7 +32,7 @@
             "willscott"
         ],
         "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic",
-        "disable_ssa_bot": true
+        "disable_ssa_bot": false
     },
     "poc": {
         "github_user": "kacperzuk-neti"
