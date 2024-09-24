@@ -6,7 +6,7 @@
     "location": "Europe",
     "status": "Active",
     "metapathway_type": "Manual",
-    "associated_org_addresses": "t1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui",
+    "associated_org_addresses": "f1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui",
     "application": {
         "allocations": {
             "standardized": "Yes; standardized"
@@ -36,7 +36,7 @@
     "pathway_addresses": {
         "msig": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
         "signer": [
-            "t1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui"
+            "f1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui"
         ]
     }
 }
