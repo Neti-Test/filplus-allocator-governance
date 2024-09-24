@@ -1,12 +1,12 @@
 {
     "application_number": 2,
-    "address": "t410fmqf5jpqut5ahctmvvpgucqzyxr6p6ond6pqephq",
+    "address": "t410f5zcpu6xsvcwyvmrc4rab56hnlkhbrpijh6advhy",
     "name": "Msig Contract",
     "organization": "Neti",
     "location": "Europe",
     "status": "Active",
     "metapathway_type": "Manual",
-    "associated_org_addresses": "t24gtzqthb6f3l5cxsckgrchlxkyllxwwjavoe2sa",
+    "associated_org_addresses": "t1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui",
     "application": {
         "allocations": {
             "standardized": "Yes; standardized"
@@ -33,12 +33,9 @@
         "github_user": "kacperzuk-neti"
     },
     "pathway_addresses": {
-        "msig": "t2xdirjkq5p6mwqsfvwsyjytkazpvdlvo3snb7pwi",
+        "msig": "t410f5zcpu6xsvcwyvmrc4rab56hnlkhbrpijh6advhy",
         "signer": [
-            "t17dx5t567wz5ues2cjkh5mor36nwxysnd5dugpey",
-            "t1roygqfjkssnfhz3xtfglikg4olckyjrl5ftlqmi",
-            "t1sqwwp3q537tgztr6maqjabhqyouu7uoycmsts7i",
-            "t1cbfxphkqhworbuugpkrhayxo2dumf5zjjyy677y"
+            "t1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui",
         ]
     }
 }
