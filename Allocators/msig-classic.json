@@ -32,7 +32,7 @@
             "martplo"
         ],
         "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic",
-        "disable_ssa_bot": false
+        "disable_ssa_bot": true
     },
     "poc": {
         "github_user": "kacperzuk-neti"
