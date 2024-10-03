@@ -16,9 +16,7 @@
         ],
         "required_sps": "4+",
         "required_replicas": "4+",
-        "tooling": [
-            "common_ui"
-        ],
+        "tooling": [],
         "data_types": [
             "Public Open Dataset (Research/Non-Profit)",
             "Public Open Commercial/Enterprise"
