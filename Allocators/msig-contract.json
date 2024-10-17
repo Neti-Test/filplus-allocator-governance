@@ -30,8 +30,7 @@
             "Filip-L",
             "lukasz-wal"
         ],
-        "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-contract",
-        "client_contract_address": "f1owcbryeqlq3vl7kydzax7r75sbtyvgpnny7fswy"
+        "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-contract"
     },
     "poc": {
         "github_user": "kacperzuk-neti"
