@@ -19,7 +19,7 @@
         "tooling": [
             "common_ui",
             "smart_contract_allocator",
-            "test"
+            "testt"
         ],
         "data_types": [
             "Public Open Dataset (Research/Non-Profit)",
