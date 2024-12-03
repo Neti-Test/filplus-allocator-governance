@@ -18,7 +18,8 @@
         "required_replicas": "4+",
         "tooling": [
             "common_ui",
-            "smart_contract_allocator"
+            "smart_contract_allocator",
+            "test"
         ],
         "data_types": [
             "Public Open Dataset (Research/Non-Profit)",
