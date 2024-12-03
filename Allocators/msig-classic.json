@@ -1,51 +1,53 @@
 {
-    "application_number": 1,
-    "address": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
-    "name": "Msig Classic",
-    "organization": "Neti",
-    "location": "Europe",
-    "status": "Active",
-    "metapathway_type": "Manual",
-    "associated_org_addresses": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
-    "application": {
-        "allocations": {
-            "standardized": "Yes; standardized"
-        },
-        "target_clients": [
-            "Test"
-        ],
-        "required_sps": "4+",
-        "required_replicas": "4+",
-        "tooling": [
-            "common_ui"
-        ],
-        "data_types": [
-            "Public Open Dataset (Research/Non-Profit)",
-            "Public Open Commercial/Enterprise"
-        ],
-        "12m_requested": 200,
-        "github_handles": [
-            "kacperzuk-neti",
-            "tplocic20",
-            "Filip-L",
-            "SzymonZiebaNeti",
-            "willscott",
-            "magsoftpl",
-            "martplo"
-        ],
-        "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic",
-        "disable_ssa_bot": false
+  "application_number": 1,
+  "address": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
+  "name": "Msig Classic",
+  "organization": "Neti",
+  "location": "Europe",
+  "status": "Active",
+  "metapathway_type": "Manual",
+  "associated_org_addresses": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
+  "application": {
+    "allocations": {
+      "standardized": "Yes; standardized"
     },
-    "poc": {
-        "github_user": "kacperzuk-neti"
-    },
-    "pathway_addresses": {
-        "msig": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
-        "signer": [
-            "t17dx5t567wz5ues2cjkh5mor36nwxysnd5dugpey",
-            "t1roygqfjkssnfhz3xtfglikg4olckyjrl5ftlqmi",
-            "t1kondrvyrnyypismf573otgrnl65n7fizbwvqeui",
-            "t12bmwnuroxvi4zk56zv2q3quuzfehiyoojmb43ta"
-        ]
-    }
+    "target_clients": [
+      "Test"
+    ],
+    "required_sps": "4+",
+    "required_replicas": "4+",
+    "tooling": [
+      "common_ui"
+    ],
+    "data_types": [
+      "Public Open Dataset (Research/Non-Profit)",
+      "Public Open Commercial/Enterprise"
+    ],
+    "12m_requested": 200,
+    "github_handles": [
+      "kacperzuk-neti",
+      "tplocic20",
+      "Filip-L",
+      "SzymonZiebaNeti",
+      "willscott",
+      "magsoftpl",
+      "martplo",
+      "lukasz-wal"
+    ],
+    "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic",
+    "disable_ssa_bot": false,
+     "client_contract_address": "t410f3rcr3t6omqusetedlme6md722xv3xspqs6k6ftq"
+  },
+  "poc": {
+    "github_user": "kacperzuk-neti"
+  },
+  "pathway_addresses": {
+    "msig": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
+    "signer": [
+      "t17dx5t567wz5ues2cjkh5mor36nwxysnd5dugpey",
+      "t1roygqfjkssnfhz3xtfglikg4olckyjrl5ftlqmi",
+      "t1kondrvyrnyypismf573otgrnl65n7fizbwvqeui",
+      "t12bmwnuroxvi4zk56zv2q3quuzfehiyoojmb43ta"
+    ]
+  }
 }
