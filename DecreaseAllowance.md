@@ -75,7 +75,7 @@ Copy the response from the command as it will be needed later to create the Lotu
 
 2. Manually enter your parameters as required:
 
-   - For **Function**, select **your function** and set  `decreaseAllowance` as a parameter.
+   - For **Function**, select **your function** and set  `decreaseAllowance` as a function name.
    - Add the first argument and set **Address** with the input as the client EVM address.
      - To parse the client address, go to [Open-RPC Playground](https://playground.open-rpc.org/?url=https://api.node.glif.io), find `Filecoin.FilecoinAddressToEthAddress` on the left side, expand it, and click **TRY IT NOW**.
      - As **params**, enter `["client filecoin address", null]`, click **play**, and copy the result representing the Filecoin address as an EVM address.
