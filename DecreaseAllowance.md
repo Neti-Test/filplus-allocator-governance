@@ -25,8 +25,7 @@ env FULLNODE_API_INFO=wss://wss.node.glif.io/apigw/lotus ./lotus daemon --lite
 ### 5. Modify the Configuration File
 
 1. Open the `~/.lotus/config.toml` file.
-2. In the `[Wallet]` section, remove the `#` symbol and set:
-   2. In the `[Wallet]` section, remove the `#` symbol from the `EnableLedger` line and set it to `true`:
+2. In the `[Wallet]` section, remove the `#` symbol from the `EnableLedger` line and set it to `true`:
   ```toml
     [Wallet]
     type: string
