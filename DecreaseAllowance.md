@@ -107,7 +107,7 @@ lotus msig propose --from=proposerAddress walletAddress destinationAddress value
 ```
 
 Where:
-- `proposerAddress` is the result of running `./lotus wallet new secp256k1-ledger`.
+- `proposerAddress` is the address of your ledger wallet.
 - `walletAddress` is the address of the allocator multisig.
 - `destinationAddress` is the `Client Contract Address` from the client's JSON.
 - `value` is the converted data from CBOR.
