@@ -87,7 +87,7 @@ Copy the response from the command as it will be needed later to create the Lotu
 ### 11. Prepare "value" for Lotus multisig propose
 
 1. Visit [cbor.me](https://cbor.me/).
-2. On the left side, enter copier encoded data:
+2. On the left side, enter copied encoded data:
    ```
    h'encoded data'
    ```
