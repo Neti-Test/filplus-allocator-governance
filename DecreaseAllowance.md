@@ -31,13 +31,17 @@ env FULLNODE_API_INFO=wss://wss.node.glif.io/apigw/lotus ./lotus daemon --lite
    ```
 
 ### 6. Restart the Lotus Daemon
- 
-### 7. Prepare Your Ledger Device
+
+### 7. Open a New Terminal Window
+
+Navigate to the folder where the extracted Lotus binary is located.
+
+### 8. Prepare Your Ledger Device
 
 1. Unlock your Ledger device.
 2. Open the Filecoin app on the Ledger and ensure it remains connected to your computer.
 
-### 8. Create a Ledger-Backed Wallet
+### 9. Create a Ledger-Backed Wallet
 
 Use the following command to create a new Ledger-backed wallet (`secp256k1-ledger`):
 
@@ -47,7 +51,7 @@ Use the following command to create a new Ledger-backed wallet (`secp256k1-ledge
 
 Copy the response from the command as it will be needed later to create the Lotus multisig propose.
 
-### 9. Prepare calldata
+### 10. Prepare calldata
 
 1. Visit [abi.hashex.org](https://abi.hashex.org).
 
@@ -65,7 +69,7 @@ Copy the response from the command as it will be needed later to create the Lotu
 4. Copy the **Encoded data**.
    ![calldata](https://github.com/user-attachments/assets/8d2162af-def8-4e56-8b31-f42f74bcf5bf)
 
-### 10. Prepare "value" for Lotus multisig propose
+### 11. Prepare "value" for Lotus multisig propose
 
 1. Visit [cbor.me](https://cbor.me/).
 2. On the left side, enter:
@@ -77,7 +81,7 @@ Copy the response from the command as it will be needed later to create the Lotu
 ![cbor](https://github.com/user-attachments/assets/7bbe1d94-835c-4e6c-a2b7-5731826fbd10)
 
 
-### 11. Create Lotus multisig propose
+### 12. Create Lotus multisig propose
 
 Run the following command to create a multisig proposal:
 
