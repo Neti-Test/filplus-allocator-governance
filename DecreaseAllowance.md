@@ -34,7 +34,8 @@ env FULLNODE_API_INFO=wss://wss.node.glif.io/apigw/lotus ./lotus daemon --lite
 
 ### 7. Open a New Terminal Window
 
-Navigate to the folder where the extracted Lotus binary is located.
+1. Navigate to the folder where the extracted Lotus binary is located.
+2. Keep the first terminal running the Lotus daemon, and use the second terminal to enter commands.
 
 ### 8. Prepare Your Ledger Device
 
