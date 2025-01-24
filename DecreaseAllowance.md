@@ -26,11 +26,25 @@ env FULLNODE_API_INFO=wss://wss.node.glif.io/apigw/lotus ./lotus daemon --lite
 
 1. Open the `~/.lotus/config.toml` file.
 2. In the `[Wallet]` section, remove the `#` symbol and set:
-   ```toml
-   EnableLedger = true
-   ```
+   2. In the `[Wallet]` section, remove the `#` symbol from the `EnableLedger` line and set it to `true`:
+  ```toml
+    [Wallet]
+    type: string
+    # env var: LOTUS_WALLET_REMOTEBACKEND
+    # RemoteBackend = ""
+    # type: bool
+    # env var: LOTUS_WALLET_ENABLELEDGER
+    EnableLedger = true
+
+    # type: bool
+    # env var: LOTUS_WALLET_DISABLELOCAL
+    # DisableLocal = false
+  ```
 
 ### 6. Restart the Lotus Daemon
+
+1. Stop the Lotus daemon by pressing `Ctrl+C` in the terminal.
+2. Run the Lotus daemon again.
 
 ### 7. Open a New Terminal Window
 
@@ -49,6 +63,7 @@ Use the following command to create a new Ledger-backed wallet (`secp256k1-ledge
 ```sh
 ./lotus wallet new secp256k1-ledger
 ```
+Keep running the command until you see the ledger wallet addresses that you use to sign the multisig transaction.
 
 Copy the response from the command as it will be needed later to create the Lotus multisig propose.
 
@@ -64,16 +79,15 @@ Copy the response from the command as it will be needed later to create the Lotu
      - As **params**, enter `["client filecoin address", null]`, click **play**, and copy the result representing the Filecoin address as an EVM address.
 ![playground](https://github.com/user-attachments/assets/4f244e7d-6cfe-4c42-ab43-30b351bc9540)
 
+   -  Add the second argument and set **Uint256**, with the input as the DataCap amount in bytes (e.g., `281474976710656 = 256TiB`). Use the [data unit converter](https://www.dataunitconverter.com/byte-to-tebibyte/) for assistance.
 
-3. Add the second argument and set **Uint256**, with the input as the DataCap amount in bytes (e.g., `281474976710656 = 256TiB`). Use the [data unit converter](https://www.dataunitconverter.com/byte-to-tebibyte/) for assistance.
-
-4. Copy the **Encoded data**.
+3. Copy the **Encoded data**.
    ![calldata](https://github.com/user-attachments/assets/8d2162af-def8-4e56-8b31-f42f74bcf5bf)
 
 ### 11. Prepare "value" for Lotus multisig propose
 
 1. Visit [cbor.me](https://cbor.me/).
-2. On the left side, enter:
+2. On the left side, enter copier encoded data:
    ```
    h'encoded data'
    ```
@@ -96,7 +110,7 @@ Where:
 - `destinationAddress` is the `Client Contract Address` from the client's JSON.
 - `value` is the converted data from CBOR.
 
-Executing the command will return a transaction CID which can be verified at:
+Executing the command will generate a transaction CID, which can be used to verify the transaction on Filfox. If the multisig requires more than one approval, log in to your multisig account, complete the signing process, and then check the returned CID by multisig on Filfox to confirm the transaction's success.
 
 https://filfox.info/en/message/<returned_cid>
 
