@@ -63,6 +63,8 @@ Use the following command to create a new Ledger-backed wallet (`secp256k1-ledge
 ```sh
 ./lotus wallet new secp256k1-ledger
 ```
+On your Ledger device, confirm the creation of the wallet.
+
 Keep running the command until you see the ledger wallet addresses that you use to sign the multisig transaction.
 
 Copy the response from the command as it will be needed later to create the Lotus multisig propose.
