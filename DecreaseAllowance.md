@@ -28,7 +28,7 @@ env FULLNODE_API_INFO=wss://wss.node.glif.io/apigw/lotus ./lotus daemon --lite
 2. In the `[Wallet]` section, remove the `#` symbol from the `EnableLedger` line and set it to `true`:
   ```toml
     [Wallet]
-    type: string
+    # type: string
     # env var: LOTUS_WALLET_REMOTEBACKEND
     # RemoteBackend = ""
     # type: bool
@@ -123,3 +123,5 @@ Once the transaction is completed, go to the **Internal Transfer** section, expa
 ### Important Information
 
 Removing DataCap does not directly return it to the allocator but remains on the contract. To utilize this DataCap, you must repeat the steps from **Prepare calldata**, but instead of setting `decreaseAllowance`, set `increaseAllowance`.
+
+Allocator should post an issue on the github informing the client about changes for book keeping
