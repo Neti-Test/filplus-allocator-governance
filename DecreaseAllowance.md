@@ -102,14 +102,16 @@ Copy the response from the command as it will be needed later to create the Lotu
 Run the following command to create a multisig proposal:
 
 ```sh
-lotus msig propose --from=proposerAddress walletAddress destinationAddress value
+lotus msig propose --from=proposerAddress walletAddress destinationAddress value method params
 ```
 
 Where:
 - `proposerAddress` is the address of your ledger wallet.
 - `walletAddress` is the address of the allocator multisig.
 - `destinationAddress` is the `Client Contract Address` from the client's JSON.
-- `value` is the converted data from CBOR.
+- `value` – the amount of FIL to send; should always be set to `0`.
+- `method` – the numeric identifier of the called method; should be set to `3844450837`.
+- `params` is the converted data from CBOR.
 
 Executing the command will generate a transaction CID, which can be used to verify the transaction on Filfox. If the multisig requires more than one approval, log in to your multisig account, complete the signing process, and then check the returned CID by multisig on Filfox to confirm the transaction's success.
 
