@@ -31,6 +31,7 @@
             "lukasz-wal",
             "dampud",
             "tmaciej-neti"
+            "kacperzuk-neti"
         ],
         "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-contract",
         "client_contract_address": "t410f3rcr3t6omqusetedlme6md722xv3xspqs6k6ftq"
