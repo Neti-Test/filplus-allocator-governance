@@ -17,7 +17,8 @@
     "required_sps": "4+",
     "required_replicas": "4+",
     "tooling": [
-      "common_ui"
+      "common_ui",
+      "smart_contract_allocator"
     ],
     "data_types": [
       "Public Open Dataset (Research/Non-Profit)",
@@ -36,7 +37,7 @@
     ],
     "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic",
     "disable_ssa_bot": false,
-     "client_contract_address": "t410f3rcr3t6omqusetedlme6md722xv3xspqs6k6ftq"
+    "client_contract_address": "t410f3rcr3t6omqusetedlme6md722xv3xspqs6k6ftq"
   },
   "poc": {
     "github_user": "kacperzuk-neti"
