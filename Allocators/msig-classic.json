@@ -1,6 +1,6 @@
 {
   "application_number": 1,
-  "address": "t410f5zcpu6xsvcwyvmrc4rab56hnlkhbrpijh6advhy",
+  "address": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
   "name": "Msig Classic",
   "organization": "Neti",
   "location": "Europe",
@@ -17,8 +17,7 @@
     "required_sps": "4+",
     "required_replicas": "4+",
     "tooling": [
-      "common_ui",
-      "smart_contract_allocator"
+      "common_ui"
     ],
     "data_types": [
       "Public Open Dataset (Research/Non-Profit)",
