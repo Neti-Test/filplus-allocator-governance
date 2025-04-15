@@ -18,7 +18,6 @@
         "required_sps": "4+",
         "required_replicas": "4+",
         "tooling": [
-            "common_ui",
             "smart_contract_allocator"
         ],
         "data_types": [
