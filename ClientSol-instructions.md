@@ -63,7 +63,7 @@ This step-by-step guide explains how to create verified DDO deals using DataCap 
 
 ## How to onboard data using DDO deals
 
-1.  First, you need to initialise a new Boost client and also set the endpoint for a public Filecoin node. In this example we are using [https://glif.io](https://glif.io/)\
+1.  First, you need to initialise a new Boost client and also set the endpoint for a public Filecoin node. In this example we are using [https://glif.io](https://glif.io/)
 
 
     ```
