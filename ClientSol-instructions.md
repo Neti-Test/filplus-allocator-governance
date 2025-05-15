@@ -30,7 +30,7 @@ A transaction that sets this value is automatically triggered during the initial
 
 The **Maximum Deviation** defines how much more storage a single Storage Provider (SP) can receive compared to an equal distribution among all selected SPs.
 
-It is currently set to **10% of the client’s total allocation** and is enforced via a smart contract transaction, which is automatically triggered during the initial setup of storage providers.
+It is currently set to **10% of the client’s total allocation** and is enforced via a smart contract, which is automatically triggered during the initial setup of storage providers.
 
 ### Example Interpretation
 
