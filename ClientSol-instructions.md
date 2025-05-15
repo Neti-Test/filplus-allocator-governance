@@ -142,7 +142,7 @@ To check the address of the contract assigned to you, go to your allocator's boo
 
 7.  Import the piece for the newly create allocation using `boostd`. Remember that `--client-addr` must be equal to the address of the Client.sol smart contract.
     ```
-    boostd import-direct --client-addr=t3tejq3lb3szsq7spvttqohsfpsju2jof2dbive2qujgz2idqaj2etuolzgbmro3owsmpuebmoghwxgt6ricvq --allocation-id=31825 baga6ea4seaqjpldhlgodxw2vjj6g46xra7jthe2g37kt7577ep5euxipkupfsly ~/bafykbzacedr7avw5yvxgjftkhfgzgbinq523csw3ir5hyukx2ulewaigyjdrm.car
+    boostd import-direct --client-addr=f410foc6psy3k7a2fb37tb2tslxj2hvzuj5ymcku7xia --allocation-id=31825 baga6ea4seaqjpldhlgodxw2vjj6g46xra7jthe2g37kt7577ep5euxipkupfsly ~/bafykbzacedr7avw5yvxgjftkhfgzgbinq523csw3ir5hyukx2ulewaigyjdrm.car
 
     Direct data import scheduled for execution
     ```
