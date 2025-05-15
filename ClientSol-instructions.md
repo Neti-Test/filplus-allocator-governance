@@ -5,6 +5,8 @@ This guide explains how allocators can use the Client Smart Contract to allocate
 ## 1. Initial Setup
 
 To begin using the Client Smart Contract, allocators must select **Allocation Type: Contract** during the **first allocation** to a client.
+![Screenshot from 2025-05-15 19-48-34](https://github.com/user-attachments/assets/7710674a-3ccb-4413-9415-ca17e8a3e9a7)
+
 
 ## 2. Granting DataCap to a Client via the Smart Contract
 
