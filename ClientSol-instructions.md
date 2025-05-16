@@ -28,7 +28,7 @@ The frontend accepts SP IDs in two formats:
 Additionally, the **max deviation** is currently set to **10%**, but this value will be configurable in the future.  
 A transaction that sets this value is automatically triggered during the initial configuration of the storage providers.
 
-## 3. Notify the client about the use of Client Smart Contract
+## 4. Notify the client about the use of Client Smart Contract
 
 Leave a comment on the GitHub issue associated with the client, informing them that they are using a Client Smart Contract. Include the address of the contract in your message.  
 To find the contract address:
