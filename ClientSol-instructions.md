@@ -104,7 +104,7 @@ This step-by-step guide explains how to create verified DDO deals using DataCap 
 
 
 5.  Then you need to calculate the `commp` and `piece size` for the generated `car` file:\
-    boostx generate-rand-car -c=50 -l=$links -s=5120000 .\
+    boostx generate-rand-car -c=50 -l=$links -s=5120000 .
 
 
     ```
