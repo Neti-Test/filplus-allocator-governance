@@ -28,6 +28,20 @@ The frontend accepts SP IDs in two formats:
 Additionally, the **max deviation** is currently set to **10%**, but this value will be configurable in the future.  
 A transaction that sets this value is automatically triggered during the initial configuration of the storage providers.
 
+## 3. Notify the client about the use of Client Smart Contract
+
+Leave a comment on the GitHub issue associated with the client, informing them that they are using a Client Smart Contract. Include the address of the contract in your message.  
+To find the contract address:
+
+1. Go to [Allocator JSON files](https://github.com/filecoin-project/Allocator-Registry/tree/main/Allocators).
+2. Locate your corresponding JSON file.
+3. Open the file and copy the value from the `client_contract_address` field.
+4. Post a comment on the related GitHub issue with the following information:
+
+   - Inform the client that their allocation is now using a Client Smart Contract.
+   - Include the contract address you copied.
+
+
 ## What Is Max Deviation?
 
 The **Maximum Deviation** defines how much more storage a single Storage Provider (SP) can receive compared to an equal distribution among all selected SPs.
@@ -117,8 +131,7 @@ This step-by-step guide explains how to create verified DDO deals using DataCap 
 
 
 6.  Create a new verified allocation for this piece using the boost client. You can use other methods to create allocations as long as the piece details match the generated commP. If you received DataCap via a Client Smart Contract, be sure to include the `--evm-client-contract` option, and provide the proper value when creating the allocation.
-To check the address of the contract assigned to you, go to your allocator's bookkeeping repo. In the Applications folder, find the JSON file of your application by your address, and check the value of the Client Contract Address field.
-
+To check the address of the contract assigned to you, first check the associated GitHub issue. The address should be provided as a comment in the issue by the allocator. If the address is not available there, go to your allocator's bookkeeping repo. In the Applications folder, find the JSON file of your application by your address, and check the value of the Client Contract Address field.
     ```
     boost allocate 
     --evm-client-contract f410foc6psy3k7a2fb37tb2tslxj2hvzuj5ymcku7xia --miner=t01013 --piece-info=baga6ea4seaqjpldhlgodxw2vjj6g46xra7jthe2g37kt7577ep5euxipkupfsly=8388608 --wallet t3tejq3lb3szsq7spvttqohsfpsju2jof2dbive2qujgz2idqaj2etuolzgbmro3owsmpuebmoghwxgt6ricvq
@@ -140,7 +153,7 @@ To check the address of the contract assigned to you, go to your allocator's boo
     ```
 
 
-7.  Import the piece for the newly create allocation using `boostd`. Remember that `--client-addr` must be equal to the address of the Client.sol smart contract.
+7.  Import the piece for the newly create allocation using `boostd`. Remember that `--client-addr` must be equal to the address of the Client Smart Contract.
     ```
     boostd import-direct --client-addr=f410foc6psy3k7a2fb37tb2tslxj2hvzuj5ymcku7xia --allocation-id=31825 baga6ea4seaqjpldhlgodxw2vjj6g46xra7jthe2g37kt7577ep5euxipkupfsly ~/bafykbzacedr7avw5yvxgjftkhfgzgbinq523csw3ir5hyukx2ulewaigyjdrm.car
 
