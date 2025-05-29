@@ -1,9 +1,9 @@
 {
     "application_number": 2,
-    "address": "t410f5zcpu6xsvcwyvmrc4rab56hnlkhbrpijh6advhy",
+    "address": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
+    "ma_address": "t410f5zcpu6xsvcwyvmrc4rab56hnlkhbrpijh6advhy",
     "name": "Msig Contract",
     "organization": "Neti",
-    "ma_address": "",  
     "metapathway_type": "Manual",
     "associated_org_addresses": "f1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui",
     "application": {
