@@ -4,7 +4,6 @@
     "ma_address": "t410f5zcpu6xsvcwyvmrc4rab56hnlkhbrpijh6advhy",
     "name": "Msig Contract",
     "organization": "Neti",
-    "ma_address": "t3rb7ocs5fipv6vmjdbdtkqzo5eqs",  
     "metapathway_type": "Manual",
     "associated_org_addresses": "f1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui",
     "application": {
@@ -27,7 +26,7 @@
         "client_contract_address": "t410f3rcr3t6omqusetedlme6md722xv3xspqs6k6ftq"
     },
     "status": {
-        "Approved": "2025-01-23 12:21:10.819000000 UTC",
+        "Approved": "2025-01-23 12:21:10.819000000 UTC"
    },
     "pathway_addresses": {
         "msig": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
