@@ -27,7 +27,7 @@ jobs:
         run: |
           file="${{ steps.changed-files.outputs.all_changed_files }}"
           echo "Parsing $file"
-          repo_url=$(jq -r '.allocation_bookkeeping' "$file")
+          repo_url=$(jq -r '.application.allocation_bookkeeping' "$file")
           echo "Repo URL: $repo_url"
 
           if [[ "$repo_url" == https://github.com/* ]]; then
