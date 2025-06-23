@@ -42,4 +42,4 @@ jobs:
 
       - name: Call allocator API
         run: |
-          curl -f -X GET "http://localhost:8080/allocator/check_if_repository_application_is_installed?owner=${{ steps.extract.outputs.owner }}&repo=${{ steps.extract.outputs.repo }}"
+          curl -f -X GET "${BACKEND_URL}/allocator/check_if_repository_application_is_installed?owner=${{ steps.extract.outputs.owner }}&repo=${{ steps.extract.outputs.repo }}"
