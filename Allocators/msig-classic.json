@@ -12,7 +12,7 @@
       "standardized": "Yes; standardized"
     },
     "target_clients": [
-      "Test Test"
+      "TestTest"
     ],
     "required_sps": "4+",
     "required_replicas": "4+",
