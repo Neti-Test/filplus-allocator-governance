@@ -1,11 +1,11 @@
-name: Check if Application is Installed
+name: Check If Repository Application Is Installed
 
 on:
   pull_request:
     types:
       - edited
       - opened
-      - synchronize  # kiedy ktoś doda nowe commity do PR
+      - synchronize
 
 jobs:
   check-repo-installation:
@@ -40,6 +40,6 @@ jobs:
             exit 1
           fi
 
-      - name: Call allocator API
+      - name: Check if repository application is installed
         run: |
           curl -f -X GET "${BACKEND_URL}/allocator/check_if_repository_application_is_installed?owner=${{ steps.extract.outputs.owner }}&repo=${{ steps.extract.outputs.repo }}"
