@@ -1,0 +1,49 @@
+{
+  "application_number": 1,
+  "address": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
+  "name": "Msig Test",
+  "organization": "Neti",
+  "location": "Europe",
+  "status": "Active",
+  "metapathway_type": "Manual",
+  "associated_org_addresses": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
+  "application": {
+    "allocations": {
+      "standardized": "Yes; standardized"
+    },
+    "target_clients": [
+      "TestTest"
+    ],
+    "required_sps": "4+",
+    "required_replicas": "4+",
+    "tooling": [
+      "common_ui"
+    ],
+    "data_types": [
+      "Public Open Dataset (Research/Non-Profit)",
+      "Public Open Commercial/Enterprise"
+    ],
+    "12m_requested": 200,
+    "github_handles": [
+      "kacperzuk-neti",
+      "tplocic20",
+      "Filip-L",
+      "SzymonZiebaNeti",
+      "willscott",
+      "magsoftpl",
+      "dampud",
+      "lukasz-wal"
+    ],
+    "allocation_bookkeeping": "https://github.com/test-owner/test-repo",
+    "disable_ssa_bot": false,
+    "client_contract_address": ""
+  },
+  "poc": {
+    "github_user": "kacperzuk-neti"
+  },
+  "pathway_addresses": {
+    "msig": "",
+    "signer": [
+    ]
+  }
+}
