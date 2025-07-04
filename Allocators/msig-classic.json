@@ -26,13 +26,12 @@
     "12m_requested": 200,
     "github_handles": [
       "kacperzuk-neti",
-      "tplocic20",
       "Filip-L",
-      "SzymonZiebaNeti",
       "willscott",
       "magsoftpl",
       "dampud",
-      "lukasz-wal"
+      "lukasz-wal",
+      "LukaszMarciniakNeti"
     ],
     "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic",
     "disable_ssa_bot": false,
@@ -47,7 +46,9 @@
       "t17dx5t567wz5ues2cjkh5mor36nwxysnd5dugpey",
       "t1roygqfjkssnfhz3xtfglikg4olckyjrl5ftlqmi",
       "t1kondrvyrnyypismf573otgrnl65n7fizbwvqeui",
-      "t12bmwnuroxvi4zk56zv2q3quuzfehiyoojmb43ta"
+      "t12bmwnuroxvi4zk56zv2q3quuzfehiyoojmb43ta",
+      "t1yvr3wo7kpnzbdtb4c5rq6aljnb74lodkojbjb6q",
+      "t1wvqglgv6hdtnhrekt2rd7uj6hthz4clzra47lji"
     ]
   }
 }
