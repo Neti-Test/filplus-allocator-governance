@@ -27,13 +27,12 @@
     "github_handles": [
       "kacperzuk-neti",
       "Filip-L",
-      "willscott",
       "magsoftpl",
       "dampud",
       "lukasz-wal",
       "LukaszMarciniakNeti"
     ],
-    "allocation_bookkeeping": "https://github.com/Neti-Test",
+    "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic",
     "disable_ssa_bot": false,
     "client_contract_address": "t410f3rcr3t6omqusetedlme6md722xv3xspqs6k6ftq"
   },
