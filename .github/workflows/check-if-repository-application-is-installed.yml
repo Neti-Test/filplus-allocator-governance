@@ -30,7 +30,7 @@ jobs:
           invalid_files=""
 
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "🔍 Processing $file"
+            echo "\n🔍 Processing $file"
 
             repo_url=$(jq -r '.application.allocation_bookkeeping // empty' "$file")
 
@@ -43,27 +43,27 @@ jobs:
               if curl -f -X GET "${BACKEND_URL}/allocator/check_if_repository_application_is_installed?owner=$owner&repo=$repo"; then
                 :
               else
-                echo "\n::error file=$file,title=Repository Check Failed::Repository check failed for $owner/$repo"
+                echo "\n ::error file=$file,title=Repository Check Failed::Repository check failed for $owner/$repo"
                 failures+="\n- $owner/$repo (from $file)"
                 failed=1
               fi
 
             else
-              echo "\n::warning file=$file,title=Invalid allocation_bookkeeping::Missing or invalid GitHub URL in $file"
+              echo "\n ::warning file=$file,title=Invalid allocation_bookkeeping::Missing or invalid GitHub URL in $file"
               invalid_files+="\n- $file"
             fi
           done
 
           if [[ "$failed" -eq 1 ]]; then
-            echo -e "\nRepository checks failed:\n$failures"
+            echo -e "\n Repository checks failed:\n$failures"
             exit 1
           fi
 
           if [[ -n "$invalid_files" ]]; then
-            echo -e "\n::warning title=Invalid or Missing GitHub URLs::The following files have missing or invalid allocation_bookkeeping GitHub URLs:\n$invalid_files"
+            echo -e "\n ::warning title=Invalid or Missing GitHub URLs::The following files have missing or invalid allocation_bookkeeping GitHub URLs:\n$invalid_files"
           fi
 
-          echo "All repository checks passed."
+          echo "\n All repository checks passed."
 
       - name: No relevant JSON files found
         if: ${{ steps.changed-files.outputs.any_changed == 'false' }}
