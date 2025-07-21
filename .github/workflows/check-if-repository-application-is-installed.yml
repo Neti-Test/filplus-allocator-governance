@@ -43,24 +43,24 @@ jobs:
               if curl -f -X GET "${BACKEND_URL}/allocator/check_if_repository_application_is_installed?owner=$owner&repo=$repo"; then
                 :
               else
-                echo "::error file=$file,title=Repository Check Failed::Repository check failed for $owner/$repo"
+                echo "\n::error file=$file,title=Repository Check Failed::Repository check failed for $owner/$repo"
                 failures+="\n- $owner/$repo (from $file)"
                 failed=1
               fi
 
             else
-              echo "::warning file=$file,title=Invalid allocation_bookkeeping::Missing or invalid GitHub URL in $file"
+              echo "\n::warning file=$file,title=Invalid allocation_bookkeeping::Missing or invalid GitHub URL in $file"
               invalid_files+="\n- $file"
             fi
           done
 
           if [[ "$failed" -eq 1 ]]; then
-            echo -e "::error title=Check Summary::Repository checks failed:\n$failures"
+            echo -e "\nRepository checks failed:\n$failures"
             exit 1
           fi
 
           if [[ -n "$invalid_files" ]]; then
-            echo -e "::warning title=Invalid or Missing GitHub URLs::The following files have missing or invalid allocation_bookkeeping GitHub URLs:\n$invalid_files"
+            echo -e "\n::warning title=Invalid or Missing GitHub URLs::The following files have missing or invalid allocation_bookkeeping GitHub URLs:\n$invalid_files"
           fi
 
           echo "All repository checks passed."
