@@ -11,7 +11,7 @@
             "standardized": "standardized"
         },
         "required_sps": "4+",
-        "required_replicas": "4+",
+        "required_replicas": "5+",
         "tooling": [
             "smart_contract_allocator"
         ],
