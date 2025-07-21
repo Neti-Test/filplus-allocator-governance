@@ -27,6 +27,7 @@ jobs:
         run: |
           failed=0
           failures=""
+          invalid_files=""
 
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "🔍 Processing $file"
@@ -40,24 +41,29 @@ jobs:
 
               echo "Checking installation status..."
               if curl -f -X GET "${BACKEND_URL}/allocator/check_if_repository_application_is_installed?owner=$owner&repo=$repo"; then
-                echo "Repository application is installed."
+                :
               else
                 echo "::error file=$file,title=Repository Check Failed::Repository check failed for $owner/$repo"
-                failures+="\n- $owner/$repo"
+                failures+="\n- $owner/$repo (from $file)"
                 failed=1
               fi
 
             else
-              echo "No valid allocation_bookkeeping GitHub URL in $file — skipping."
+              echo "::warning file=$file,title=Invalid allocation_bookkeeping::Missing or invalid GitHub URL in $file"
+              invalid_files+="\n- $file"
             fi
           done
 
           if [[ "$failed" -eq 1 ]]; then
-            echo -e "::error title=Check Summary::One or more repository checks failed:\n$failures"
+            echo -e "::error title=Check Summary::Repository checks failed:\n$failures"
             exit 1
-          else
-            echo "All repository checks passed."
           fi
+
+          if [[ -n "$invalid_files" ]]; then
+            echo -e "::warning title=Invalid or Missing GitHub URLs::The following files have missing or invalid allocation_bookkeeping GitHub URLs:\n$invalid_files"
+          fi
+
+          echo "All repository checks passed."
 
       - name: No relevant JSON files found
         if: ${{ steps.changed-files.outputs.any_changed == 'false' }}
