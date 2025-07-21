@@ -67,4 +67,4 @@ jobs:
 
       - name: No relevant JSON files found
         if: ${{ steps.changed-files.outputs.any_changed == 'false' }}
-        run: echo "✅ No changed JSON files in Allocators/ — nothing to check."
+        run: echo "No changed JSON files in Allocators/ — nothing to check."
