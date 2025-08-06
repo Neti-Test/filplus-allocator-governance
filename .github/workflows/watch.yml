@@ -27,7 +27,7 @@ jobs:
       
           echo "Processing changed JSON files from merge commit..."
       
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | grep 'Allocators/.*\.json$' | while read -r line; do echo -n "\"$line\","; done)
+          CHANGED_FILES=$(git diff --name-only "${{ github.event.before }}" "${{ github.event.after }}" | grep '^Allocators/.*\.json$' || true)
           
           if [[ -z "$CHANGED_FILES" ]]; then
             echo "No relevant changed files in Allocators/"
