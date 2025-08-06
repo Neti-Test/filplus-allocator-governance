@@ -7,7 +7,6 @@ on:
 
 jobs:
   add-or-update-allocators:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
       BACKEND_URL: https://api.staging.allocator.tech
