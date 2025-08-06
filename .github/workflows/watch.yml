@@ -12,7 +12,7 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
-      BACKEND_URL: https://api.staging.allocator.tech/
+      BACKEND_URL: https://api.staging.allocator.tech
 
     steps:
       - name: Checkout repository
@@ -30,7 +30,7 @@ jobs:
 
           echo "🔍 Processing changed JSON files..."
           BASE_SHA=$(git merge-base origin/main HEAD)
-          CHANGED_FILES=$(git diff --name-only "$BASE_SHA" HEAD | grep '^Allocators/.*\.json$' || true)
+          CHANGED_FILES=$(git diff --name-only HEAD^1 HEAD | grep '^Allocators/.*\.json$' || true)
 
           if [[ -z "$CHANGED_FILES" ]]; then
             echo "No relevant changed files in Allocators/"
