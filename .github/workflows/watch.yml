@@ -1,4 +1,4 @@
-name: Update active allocators
+name: Add or Update Allocators on Merge
 
 on:
   pull_request:
@@ -6,41 +6,56 @@ on:
       - closed
     branches:
       - main
-    paths:
-      - 'Allocators/**/*.json'
-  push:
-    branches:
-      - main
-    paths:
-      - 'Allocators/**/*.json'
 
 jobs:
-  watch_jsons:
+  add-or-update-allocators:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
-      BACKEND_URL: https://api.staging.allocator.tech
+      BACKEND_URL: https://api.staging.allocator.tech/
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-          
-      - name: Find changed JSON files in Active folder
-        id: find_json
+          fetch-depth: 0 
+
+      - name: Set up Git
+        run: git fetch origin main
+
+      - name: Add or Update Allocator
         run: |
-          echo "Searching for JSON files in 'Allocators' folder..."
-          FILES_CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | grep 'Allocators/.*\.json$' | while read -r line; do echo -n "\"$line\","; done)
-          FILES_CHANGED="${FILES_CHANGED%,}" # Remove the trailing comma
-          echo "Files changed: $FILES_CHANGED"
-          echo "::set-output name=files_changed::$FILES_CHANGED"
-      
-      - name: Notify Backend Service
-        if: steps.find_json.outputs.files_changed != ''
-        run: |
-          FILES_JSON="{\"files_changed\":[$(echo ${{ steps.find_json.outputs.files_changed }} | sed 's/\([^,]*\)/"\1"/g')]}"
-          echo "JSON being sent: $FILES_JSON"
-          curl --header "Content-Type: application/json" \
-               --request POST \
-               --data "$FILES_JSON" \
-               "${BACKEND_URL}/allocator/create"
+          failed=0
+          failures=""
+
+          echo "🔍 Processing changed JSON files..."
+          BASE_SHA=$(git merge-base origin/main HEAD)
+          CHANGED_FILES=$(git diff --name-only "$BASE_SHA" HEAD | grep '^Allocators/.*\.json$' || true)
+
+          if [[ -z "$CHANGED_FILES" ]]; then
+            echo "No relevant changed files in Allocators/"
+            exit 0
+          fi
+
+          for file in $CHANGED_FILES; do
+            echo ""
+            echo "Adding/Updating: $file"
+            JSON_BODY="{\"files_changed\":[\"$file\"]}"
+
+            if curl -f --header "Content-Type: application/json" \
+                     --request POST \
+                     --data "$JSON_BODY" \
+                     "${BACKEND_URL}/allocator/create"; then
+              echo "Success for $file"
+            else
+              echo "::error file=$file,title=Backend failed::Failed to add/update allocator for $file"
+              failures="${failures}\n- $file"
+              failed=1
+            fi
+          done
+
+          if [[ "$failed" -eq 1 ]]; then
+            echo ""
+            echo -e "::error title=One or more backend calls failed::Failed for the following files:\n$failures"
+            exit 1
+          fi
