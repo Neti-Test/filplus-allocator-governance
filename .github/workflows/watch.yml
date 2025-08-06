@@ -28,7 +28,7 @@ jobs:
           failed=0
           failures=""
       
-          echo "🔍 Processing changed JSON files from merge commit..."
+          echo "Processing changed JSON files from merge commit..."
       
           CHANGED_FILES=$(git diff --name-only HEAD^1 HEAD | grep '^Allocators/.*\.json$' || true)
       
@@ -36,7 +36,7 @@ jobs:
             echo "No relevant changed files in Allocators/"
             exit 0
           fi
-      
+          echo "$CHANGED_FILES"
           for file in $CHANGED_FILES; do
             echo ""
             echo "Adding/Updating: $file"
