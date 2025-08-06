@@ -1,9 +1,7 @@
 name: Add or Update Allocators on Merge
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
     branches:
       - main
 
@@ -30,8 +28,8 @@ jobs:
       
           echo "Processing changed JSON files from merge commit..."
       
-          CHANGED_FILES=$(git diff --name-only HEAD^1 HEAD | grep '^Allocators/.*\.json$' || true)
-      
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | grep 'Allocators/.*\.json$' | while read -r line; do echo -n "\"$line\","; done)
+          
           if [[ -z "$CHANGED_FILES" ]]; then
             echo "No relevant changed files in Allocators/"
             exit 0
