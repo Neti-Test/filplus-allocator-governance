@@ -27,35 +27,46 @@ jobs:
         run: |
           failed=0
           failures=""
-
-          echo "🔍 Processing changed JSON files..."
-          BASE_SHA=$(git merge-base origin/main HEAD)
+      
+          echo "Processing changed JSON files from merge commit..."
+      
           CHANGED_FILES=$(git diff --name-only HEAD^1 HEAD | grep '^Allocators/.*\.json$' || true)
-
+      
           if [[ -z "$CHANGED_FILES" ]]; then
             echo "No relevant changed files in Allocators/"
             exit 0
           fi
-
+          echo "$CHANGED_FILES"
           for file in $CHANGED_FILES; do
             echo ""
             echo "Adding/Updating: $file"
             JSON_BODY="{\"files_changed\":[\"$file\"]}"
-
-            if curl -f --header "Content-Type: application/json" \
-                     --request POST \
-                     --data "$JSON_BODY" \
-                     "${BACKEND_URL}/allocator/create"; then
+      
+            RESPONSE=$(curl --silent --show-error --write-out "HTTP_STATUS:%{http_code}" \
+                            --header "Content-Type: application/json" \
+                            --request POST \
+                            --data "$JSON_BODY" \
+                            "${BACKEND_URL}/allocator/create" 2>&1)
+      
+            HTTP_BODY=$(echo "$RESPONSE" | sed -e 's/HTTP_STATUS\:.*//g')
+            HTTP_CODE=$(echo "$RESPONSE" | tr -d '\n' | sed -e 's/.*HTTP_STATUS://')
+      
+            if [[ "$HTTP_CODE" -ge 200 && "$HTTP_CODE" -lt 300 ]]; then
               echo "Success for $file"
             else
-              echo "::error file=$file,title=Backend failed::Failed to add/update allocator for $file"
-              failures="${failures}\n- $file"
+              reason="HTTP $HTTP_CODE"
+              if [[ "$HTTP_CODE" == "000" ]]; then
+                reason="curl error: $(echo "$RESPONSE" | head -n 1)"
+              fi
+      
+              echo "::error file=$file,title=Backend failed::Failed to add/update allocator for $file — $reason"
+              failures="${failures}\n- $file: $reason"
               failed=1
             fi
           done
-
+      
           if [[ "$failed" -eq 1 ]]; then
             echo ""
-            echo -e "::error title=One or more backend calls failed::Failed for the following files:\n$failures"
+            echo -e "::error title=One or more backend calls failed::Failed for the following files:$failures"
             exit 1
           fi
