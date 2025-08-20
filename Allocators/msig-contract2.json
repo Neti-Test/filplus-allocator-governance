@@ -1,0 +1,42 @@
+{
+    "application_number": 2,
+    "address": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
+    "ma_address": "t410f5zcpu6xsvcwyvmrc4rab56hnlkhbrpijh6advhy",
+    "name": "Msig Contract",
+    "organization": "Neti",
+    "metapathway_type": "Manual",
+    "associated_org_addresses": "f1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui",
+    "application": {
+        "allocations": {
+            "standardized": "standardized"
+        },
+        "required_sps": "4+",
+        "required_replicas": "4+",
+        "tooling": [
+            "smart_contract_allocator"
+        ],
+        "github_handles": [
+            "Filip-L",
+            "lukasz-wal",
+            "kacperzuk-neti",
+            "LukaszMarciniakNeti",
+            "tmaciej-neti"
+        ],
+        "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-contract",
+        "client_contract_address": "t410fxd6tft3hpsnstbqxbnzvtwhd3yrtuivkldyuh2y"
+    },
+    "status": {
+        "Approved": "2025-01-23 12:21:10.819000000 UTC"
+   },
+    "pathway_addresses": {
+        "msig": "t2s4w6ls2x4uqivh7pdcd3hgzl4dv5ux7oqxjd74i",
+        "signer": [
+            "f1gyf5fzvohawd2vzobjht4ued5zunfjjxqfyhqui",
+            "f1blulplfw336k54jngtlpgxm6zcsmdqe7l5txpfi",
+            "f1kondrvyrnyypismf573otgrnl65n7fizbwvqeui",
+            "f12bmwnuroxvi4zk56zv2q3quuzfehiyoojmb43ta",
+            "t1yvr3wo7kpnzbdtb4c5rq6aljnb74lodkojbjb6q",
+            "t1wvqglgv6hdtnhrekt2rd7uj6hthz4clzra47lji"
+        ]
+    }
+}
