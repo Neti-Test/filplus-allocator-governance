@@ -35,7 +35,9 @@
     "allocation_bookkeeping": "https://github.com/Neti-Test/filplus-bookkeeping-msig-classic",
 
     "disable_ssa_bot": false,
-    "client_contract_address": "t410f3rcr3t6omqusetedlme6md722xv3xspqs6k6ftq"
+    "_client_contract_address": "t410f3rcr3t6omqusetedlme6md722xv3xspqs6k6ftq",
+    "client_contract_address": "t410figc6h3l5pa3ah7c57vyaitzdolpjpwh3rrtvppy"
+    
   },
   "poc": {
     "github_user": "kacperzuk-neti"
